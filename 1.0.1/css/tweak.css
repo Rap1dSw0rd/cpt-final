@@ -1,0 +1,76 @@
+/* Start with core styles outside of a media query that apply to mobile and up */
+/* Global typography and design elements, stacked containers */
+body { font-family: Helvetica, san-serif; }
+
+/* Stack the two content containers */
+.main,
+.sidebar { display:block; width:100%; }
+
+/* First breakpoint at 576px */
+/* Inherits mobile styles, but floats containers to make columns */
+@media all and (min-width: 36em){
+	.main { float: left; width:60%; }
+	.sidebar { float: left; width:40%; }
+}
+
+/* Second breakpoint at 800px */
+/* Adjusts column proportions, tweaks base H1 */
+@media all and (min-width: 50em){
+	.main { width:70%; }
+	.sidebar { width:30%; }
+	/* You can also tweak any other styles in a breakpoint */
+	H1 { font-size:1.2em }
+}
+
+@media all and (max-width: 600px) {
+    .slideshow {
+        display:none;
+    }
+}
+
+/*Store CSS*/
+.top { display: inline-block; }
+
+.searchBar {
+	position: absolute !important;
+   left: 0px;
+   width: 300px;
+   border:3px solid #8AC007;
+   padding: 10px;
+
+}
+
+.shoppingCart {
+	position: absolute !important;
+   right: 0px;
+   width: 300px;
+   border:3px solid #8AC007;
+   padding: 10px;
+
+}
+
+
+
+
+
+/*Slide show css*/
+.fadein { 
+	position:relative; 
+	height:250px; 
+	width:400px;
+	margin: 0 auto;
+	background: url("../images/slideshow/slideshow-bg.png") repeat-x scroll left top transparent;
+	padding: 10px;
+	border-radius: 20px;
+	}
+.fadein img { 
+	position:absolute; 
+	left:10px; 
+	top:10px; 
+	height:250px;
+	width:400px;
+	border-radius: 20px;
+	}
+.slideshow{
+	margin: 0 auto;
+	}
